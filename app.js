@@ -1,6 +1,19 @@
 'use strict';
 
-var fs = require('fs');
+var express = require('express');
+var app 	= express();
+
+app.get('/', function(req, res){
+	res.send("F!");
+});
+
+app.listen((process.env.PORT || 3000), function(){
+
+	console.log('servidor corriendo en el puerto 3000');
+
+});
+
+/*var fs = require('fs');
 var express = require('express');
 var app 	= express();
 var bodyParser = require('body-parser');
@@ -65,4 +78,4 @@ app.listen((process.env.PORT || 3000), function(){
 
 	console.log('servidor corriendo en el puerto 3000');
 
-});
+});*/
